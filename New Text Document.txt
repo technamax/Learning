@@ -1,3 +1,41 @@
-this is my first file 
-
+this is my Second file and i am using this line to check merge
 this is my second line 
+
+
+https://www.youtube.com/watch?v=b8fFRX0T38M
+
+/* #1- How many copies of the book titled "The Lost Tribe" are owned by the library branch whose name is "Sharpstown"? */
+Hello world of git 
+
+select 
+  copies.book_copies_BranchID AS [Branch ID], 
+  branch.library_branch_BranchName AS [Branch Name], 
+  copies.book_copies_No_Of_Copies AS [Number of Copies], 
+  book.book_Title AS [Book Title] 
+from 
+  tbl_book_copies copies, 
+  tbl_book book, 
+  tbl_library_branch branch 
+where 
+  copies.book_copies_BookID = book.book_BookID 
+  and book_copies_BranchID = branch.library_branch_BranchID 
+  and book.book_Title = 'The Lost Tribe' 
+  AND branch.library_branch_BranchName = 'Sharpstown' 
+
+GO 
+
+/* #2- How many copies of the book titled "The Lost Tribe" are owned by each library branch? */
+
+select 
+  copies.book_copies_BranchID AS [Branch ID], 
+  branch.library_branch_BranchName AS [Branch Name], 
+  copies.book_copies_No_Of_Copies AS [Number of Copies], 
+  book.book_Title AS [Book Title] 
+from 
+  tbl_book_copies AS copies, 
+  tbl_book AS book, 
+  tbl_library_branch AS branch 
+where 
+  copies.book_copies_BookID = book.book_BookID 
+  and book_copies_BranchID = branch.library_branch_BranchID 
+  and book_copies_BranchID = branch.library_branch_BranchID 
