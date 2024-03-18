@@ -5,3 +5,36 @@ this is my second line
 https://www.youtube.com/watch?v=b8fFRX0T38M
 
 Hello world of git 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #20000- How many copies of the book titled "The Lost Tribe" are owned by each 
+library branch? */
+
+select 
+  copies.book_copies_BranchID AS [Branch ID], 
+  branch.library_branch_BranchName AS [Branch Name], 
+  copies.book_copies_No_Of_Copies AS [Number of Copies], 
+  book.book_Title AS [Book Title] 
+from 
+  tbl_book_copies AS copies, 
+  tbl_book AS book, 
+  tbl_library_branch AS branch 
+where 
+  copies.book_copies_BookID = book.book_BookID 
+  and book_copies_BranchID = branch.library_branch_BranchID 
