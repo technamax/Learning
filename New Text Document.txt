@@ -5,6 +5,7 @@ this is my second line
 https://www.youtube.com/watch?v=b8fFRX0T38M
 
 /* #1- How many copies of the book titled "The Lost Tribe" are owned by the library branch whose name is "Sharpstown"? */
+Hello world of git 
 
 select 
   copies.book_copies_BranchID AS [Branch ID], 
@@ -36,4 +37,5 @@ from
   tbl_library_branch AS branch 
 where 
   copies.book_copies_BookID = book.book_BookID 
+  and book_copies_BranchID = branch.library_branch_BranchID 
   and book_copies_BranchID = branch.library_branch_BranchID 
